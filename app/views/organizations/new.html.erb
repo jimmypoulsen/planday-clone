@@ -7,12 +7,32 @@
     </div>
 
     <h2>Din bruger</h2>
-    <div class="form-group">
-      <%= f.fields_for @employee do |u| %>
-        <%= u.label :name %>
-        <%= u.text_field :name, class: 'form-control' %>
-      <% end %>
-    </div>
+    <%= f.fields_for @employee do |u| %>
+      <div class="form-group">
+        <%= u.label :email %>
+        <%= u.email_field :email, class: 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= u.label :firstname %>
+        <%= u.text_field :firstname, class: 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= u.label :lastname %>
+        <%= u.text_field :lastname, class: 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= u.label :password %>
+        <%= u.password_field :password, class: 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= u.label :password_confirmation %>
+        <%= u.password_field :password_confirmation, class: 'form-control' %>
+      </div>
+    <% end %>
 
     <%= f.submit %>
   <% end %>

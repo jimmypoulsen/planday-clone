@@ -7,5 +7,7 @@ Rails.application.routes.draw do
 
   resources :employees
   resources :shifts
-  resources :organizations, only: [:new, :create, :show]
+  resources :organizations, only: [:new, :create, :show] do
+    resources :employee_groups
+  end
 end

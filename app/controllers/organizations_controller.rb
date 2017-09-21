@@ -9,13 +9,23 @@ class OrganizationsController < ApplicationController
   end
 
   def create
-    org = Organization.create(name: organization_params[:name], employee: current_employee)
+    org = Organization.new(organization_params.except(:employee))
+    employee = Employee.new(organization_params[:employee])
 
-    if org.save?
-      redirect_to organization_path
+    if org.save
+      group = org.employee_groups.create(name: 'All')
+      employee.organization = org
+      employee.employee_group = group
+      employee.save!
+
+      redirect_to org
     else
       redirect_to root
     end
+  end
+
+  def show
+
   end
 
   def destoy
@@ -25,6 +35,9 @@ class OrganizationsController < ApplicationController
   private
 
   def organization_params
-    params.require(:organization).permit(:name)
+    params.require(:organization).permit(
+      :name,
+      employee: [:email, :firstname, :lastname, :password, :password_confirmation]
+    )
   end
 end
