@@ -1,3 +1,9 @@
 <h1>Planday xd</h1>
 
-THIS IS THE WELCOME PAGE USING THE WelcomeControllerxd
+<p>THIS IS THE WELCOME PAGE USING THE WelcomeControllerxd</p>
+
+<% if current_employee.present? %>
+  <%= link_to "Log ud", logout_path, method: :delete, class: 'btn btn-primary' %>
+<% else %>
+  <%= link_to "Log ind", login_path, method: :get, class: 'btn btn-primary' %>
+<% end %>
