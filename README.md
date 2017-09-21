@@ -45,7 +45,7 @@ Specification:
 Design:
 * Dashboard
 	* displays the current shifts (both available and unavailable)
-* Schedule
+* Schedule (LAVET AF @frederikspang)
 	* displays employees and employee groups
 	* displays the current shifts (both available and unavailable)
 * People
