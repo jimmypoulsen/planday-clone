@@ -23,7 +23,7 @@
             <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <%= link_to 'Opret organisation', new_organization_path, class: 'nav-link' %>
           </li>
           <li class="nav-item">
             <% if current_employee.present? %>

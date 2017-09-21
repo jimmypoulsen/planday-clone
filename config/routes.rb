@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: "welcome#index"
+  root to: 'welcome#index'
 
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
@@ -7,5 +7,5 @@ Rails.application.routes.draw do
 
   resources :employees
   resources :shifts
-  resources :organization
+  resources :organizations, only: [:new, :create, :show]
 end

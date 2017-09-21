@@ -1,0 +1,19 @@
+<h1 class="text-center">Ny org</h1>
+<div class="row">
+  <%= form_for @organization, html: { class: 'col-md-6 mx-auto'} do |f| %>
+    <div class="form-group">
+      <%= f.label :name %>
+      <%= f.text_field :name, class: 'form-control' %><br>
+    </div>
+
+    <h2>Din bruger</h2>
+    <div class="form-group">
+      <%= f.fields_for @employee do |u| %>
+        <%= u.label :name %>
+        <%= u.text_field :name, class: 'form-control' %>
+      <% end %>
+    </div>
+
+    <%= f.submit %>
+  <% end %>
+</div>

@@ -1,10 +1,11 @@
-class OrganizationController < ApplicationController
+class OrganizationsController < ApplicationController
   def index
     @organizations = Organization.where name: 'Progras'
   end
 
   def new
-    @user = Organization.new
+    @organization = Organization.new
+    @employee = Employee.new
   end
 
   def create
