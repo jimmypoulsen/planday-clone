@@ -1,6 +1,12 @@
-SHIT DU HAR MANGE VAGTER! DU HAR <%= @shifts.count %>
+<div id="calendar"></div>
 
-<hr />
-<% @shifts.each do |shift| %>
-  <%= l(shift.time_from, format: :short) %> - <%= l(shift.time_to, format: :short) %>
-<% end %>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('#calendar').fullCalendar({
+      events: <%= raw(@shifts.map{|i| {title: i.employee.name, start: i.time_from.iso8601, end: i.time_to.iso8601} }.to_json) %>,
+      timeFormat: 'H:mm',
+      defaultView: 'agendaWeek',
+      height: 'auto'
+    })
+  });
+</script>
