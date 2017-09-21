@@ -29,3 +29,5 @@ Dashboard: https://ga1.imgix.net/screenshot/o/101331-1457434303-756816?ixlib=rb-
 * @jimmypoulsen(https://github.com/jimmypoulsen/)
 * @emilbaekdahl(https://github.com/emilbaekdahl/)
 * @frederikspang(https://github.com/frederikspang/)
+* @sansemand(https://github.com/sansemand/)
+* @C0DK(https://github.com/c0dk/)
