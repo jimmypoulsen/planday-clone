@@ -26,7 +26,11 @@
             <a class="nav-link" href="#">Link</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled" href="#">Disabled</a>
+            <% if current_employee.present? %>
+              <%= link_to "Log ud", logout_path, method: :delete, class: 'nav-link' %>
+            <% else %>
+              <%= link_to "Log ind", login_path, method: :get, class: 'nav-link' %>
+            <% end %>
           </li>
         </ul>
         <form class="form-inline mt-2 mt-md-0">
