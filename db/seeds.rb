@@ -9,6 +9,7 @@ jimmy = Employee.create!(firstname: 'Jimmy', lastname: 'Poulsen', age: 20, email
 frederik = Employee.create!(firstname: 'Frederik', lastname: 'Spang', age: 21, email: 'frederik@progras.dk', password: 'frederik123', password_confirmation: 'frederik123', organization: organization, employee_group: employee_group)
 emil = Employee.create!(firstname: 'Emil', lastname: 'Bækdahl', age: 21, email: 'emil@progras.dk', password: 'emil123', password_confirmation: 'emil123', organization: organization, employee_group: employee_group)
 jesper = Employee.create!(firstname: 'Jesper', lastname: 'Nielsen', age: 21, email: 'jesper.sand.nielse@gmail.com', password: 'jesper123', password_confirmation: 'jesper123', organization: organization, employee_group: employee_group)
+casper = Employee.create!(firstname: 'Casper', lastname: 'Bang', age: 19, email: 'a@thecdk.net', password: 'jesper123', password_confirmation: 'jesper123', organization: organization, employee_group: employee_group)
 
 place = Place.create(name: 'HQ', organization: organization, employee_group: employee_group)
 
