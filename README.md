@@ -4,23 +4,53 @@ Things to be implemented:
 * Organizations
 	* name
 	* user_id
-* Users
+
+* Employees
 	* organization_id
 	* firstname
 	* lastname
 	* age
 	* email
 	* password
+
+* Employee groups
+	* organization_id
+	* name
+	* min_age
+
+* Places
+	* organization_id
+	* employee_group_id
+	* name
+
 * Shifts
 	* organization_id
 	* place_id
 	* time_from
 	* time_to
-	* user_id - if null the shift is available
-* Places
+	* employee_id - if null the shift is available
+
+* Requests
 	* organization_id
-	* name
-	* min_age - minimum age required for working at this place (eg. clerk, minimum age of 16 in Denmark)
+	* shift_id
+	* accepted - is the request accepted or denied?
+
+Specification:
+* Add an organization
+* Add users to an organization
+* Add places (eg. in a club there is two bars, bar1 and bar2)
+* Add shifts
+* Request shifts
+
+Design:
+* Dashboard
+	* displays the current shifts (both available and unavailable)
+* Schedule
+	* displays employees and employee groups
+	* displays the current shifts (both available and unavailable)
+* People
+	* all employees and what group they belong to
+
 
 Take a look at planday: www.planday.dk
 Dashboard: https://ga1.imgix.net/screenshot/o/101331-1457434303-756816?ixlib=rb-1.0.0&ch=Width%2CDPR&auto=format
