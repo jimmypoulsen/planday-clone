@@ -5,18 +5,19 @@ Things to be implemented:
 	* name
 	* user_id
 
+* Employee groups
+	* organization_id
+	* name
+	* min_age
+
 * Employees
 	* organization_id
+	* employee_group_id
 	* firstname
 	* lastname
 	* age
 	* email
 	* password
-
-* Employee groups
-	* organization_id
-	* name
-	* min_age
 
 * Places
 	* organization_id
