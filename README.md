@@ -3,7 +3,6 @@
 Things to be implemented:
 * Organizations
 	* name
-	* user_id
 
 * Employee groups
 	* organization_id
@@ -17,7 +16,7 @@ Things to be implemented:
 	* lastname
 	* age
 	* email
-	* password
+	* password_digest
 
 * Places
 	* organization_id

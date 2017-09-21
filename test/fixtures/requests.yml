@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  accepted: false
+  organization: one
+  shift: one
+
+two:
+  accepted: false
+  organization: two
+  shift: two

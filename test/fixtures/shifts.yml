@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  time_from: 2017-09-21 20:23:12
+  time_to: 2017-09-21 20:23:12
+  organization: one
+  place: one
+  employee: one
+
+two:
+  time_from: 2017-09-21 20:23:12
+  time_to: 2017-09-21 20:23:12
+  organization: two
+  place: two
+  employee: two
