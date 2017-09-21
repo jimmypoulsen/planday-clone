@@ -1,0 +1,6 @@
+SHIT DU HAR MANGE VAGTER! DU HAR <%= @shifts.count %>
+
+<hr />
+<% @shifts.each do |shift| %>
+  <%= l(shift.time_from, format: :short) %> - <%= l(shift.time_to, format: :short) %>
+<% end %>

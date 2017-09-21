@@ -1,18 +1,13 @@
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
 
 organization = Organization.create(name: 'Progras')
 
 employee_group = EmployeeGroup.create(name: 'Developers', min_age: 18, organization: organization)
 
-jimmy = Employee.create(firstname: 'Jimmy', lastname: 'Poulsen', age: 20, email: 'jimmy@progras.dk', password: 'jimmy123', password_confirmation: 'jimmy123', organization: organization, employee_group: employee_group)
-frederik = Employee.create(firstname: 'Frederik', lastname: 'Spang', age: 21, email: 'frederik@progras.dk', password: 'frederik123', password_confirmation: 'frederik123', organization: organization, employee_group: employee_group)
-emil = Employee.create(firstname: 'Emil', lastname: 'Bækdahl', age: 21, email: 'emil@progras.dk', password: 'emil123', password_confirmation: 'emil123', organization: organization, employee_group: employee_group)
+jimmy = Employee.create!(firstname: 'Jimmy', lastname: 'Poulsen', age: 20, email: 'jimmy@progras.dk', password: 'jimmy123', password_confirmation: 'jimmy123', organization: organization, employee_group: employee_group)
+frederik = Employee.create!(firstname: 'Frederik', lastname: 'Spang', age: 21, email: 'frederik@progras.dk', password: 'frederik123', password_confirmation: 'frederik123', organization: organization, employee_group: employee_group)
+emil = Employee.create!(firstname: 'Emil', lastname: 'Bækdahl', age: 21, email: 'emil@progras.dk', password: 'emil123', password_confirmation: 'emil123', organization: organization, employee_group: employee_group)
 
 place = Place.create(name: 'HQ', organization: organization, employee_group: employee_group)
 
